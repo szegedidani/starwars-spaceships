@@ -31,13 +31,11 @@ export class AppComponent {
 
 
   getSpaceships() {
-    setTimeout(() => {
-      this.http.get('http://localhost:8080/')
-        .subscribe(
-          (data) => this.spaceships = JSON.parse(data['_body']),
-          err => { console.error('Valami nem jó!'); }
-        );
-    }, 200);
+    this.http.get('http://localhost:8080/')
+      .subscribe(
+        (data) => this.spaceships = JSON.parse(data['_body']),
+        err => { console.error('Valami nem jó!'); }
+      );
   }
 
   create(newSpaceship) {
