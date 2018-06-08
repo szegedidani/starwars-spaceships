@@ -1,0 +1,11 @@
+input {
+  background-color: rgb(253, 232, 200);
+}
+
+input:focus {
+  color: black;
+}
+
+h1 {
+  color: gold
+}

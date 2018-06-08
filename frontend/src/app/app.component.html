@@ -1,0 +1,105 @@
+<div class="row">
+  <div class="col-12 text-center">
+    <h1>Űrhajók</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <table class="table table-striped table-dark table-lg">
+      <thead>
+        <th>Id</th>
+        <th>Consumables</th>
+        <th>Denomination</th>
+        <th>Cargo-capacity</th>
+        <th>Max atmosphering speed</th>
+        <th>Crew</th>
+        <th>Lengthiness</th>
+        <th>Model</th>
+        <th>Cost in credits</th>
+        <th>Manufacturer</th>
+        <th>Image</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <input type="text" class="form-control" [(ngModel)]="newSpaceship.id">
+          </td>
+          <td>
+            <input type="text" class="form-control" [(ngModel)]="newSpaceship.consumables">
+          </td>
+          <td>
+            <input type="text" class="form-control" [(ngModel)]="newSpaceship.denomination">
+          </td>
+          <td>
+            <input type="text" class="form-control" [(ngModel)]="newSpaceship.cargo_capacity">
+          </td>
+          <td>
+            <input type="text" class="form-control" [(ngModel)]="newSpaceship.max_atmosphering_speed">
+          </td>
+          <td>
+            <input type="text" class="form-control" [(ngModel)]="newSpaceship.crew">
+          </td>
+          <td>
+            <input type="text" class="form-control" [(ngModel)]="newSpaceship.lengthiness">
+          </td>
+          <td>
+            <input type="text" class="form-control" [(ngModel)]="newSpaceship.model">
+          </td>
+          <td>
+            <input type="text" class="form-control" [(ngModel)]="newSpaceship.cost_in_credits">
+          </td>
+          <td>
+            <input type="text" class="form-control" [(ngModel)]="newSpaceship.manufacturer">
+          </td>
+          <td>
+            <input type="text" class="form-control" [(ngModel)]="newSpaceship.image">
+          </td>
+          <td>
+            <button type="button" class="btn btn-success" (click)="create(newSpaceship)">Hozzáadás</button>
+          </td>
+        </tr>
+        <tr *ngFor="let spaceship of spaceships">
+          <td>
+            <input type="text" [(ngModel)]="spaceship.id" class="form-control">
+          </td>
+          <td>
+            <input type="text" [(ngModel)]="spaceship.consumables" class="form-control">
+          </td>
+          <td>
+            <input type="text" [(ngModel)]="spaceship.denomination" class="form-control">
+          </td>
+          <td>
+            <input type="text" [(ngModel)]="spaceship.cargo_capacity" class="form-control">
+          </td>
+          <td>
+            <input type="text" [(ngModel)]="spaceship.max_atmosphering_speed" class="form-control">
+          </td>
+          <td>
+            <input type="text" [(ngModel)]="spaceship.crew" class="form-control">
+          </td>
+          <td>
+            <input type="text" [(ngModel)]="spaceship.lengthiness" class="form-control">
+          </td>
+          <td>
+            <input type="text" [(ngModel)]="spaceship.model" class="form-control">
+          </td>
+          <td>
+            <input type="text" [(ngModel)]="spaceship.cost_in_credits" class="form-control">
+          </td>
+          <td>
+            <input type="text" [(ngModel)]="spaceship.manufacturer" class="form-control">
+          </td>
+          <td>
+            <input type="text" [(ngModel)]="spaceship.image" class="form-control">
+          </td>
+          <td>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary" (click)="update(spaceship)">Frissítés</button>
+              <button type="button" class="btn btn-danger" (click)="remove(spaceship)">Törlés</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
